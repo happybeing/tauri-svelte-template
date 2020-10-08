@@ -1,0 +1,27 @@
+{
+	"name": "tauri-svelte-template",
+	"version": "0.0.0",
+	"description": "A quick start template for Tauri apps using Sveltejs",
+	"main": "index.js",
+	"author": "theWebalyst",
+	"license": "GPL-3.0",
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"start": "sirv public"
+	},
+	"dependencies": {
+		"svelte": "^3.29.0",
+		"tauri": "^0.12.0",
+		"sirv-cli": "^1.0.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^14.0.0",
+		"@rollup/plugin-node-resolve": "^8.0.0",
+		"rollup": "^2.3.4",
+		"rollup-plugin-livereload": "^2.0.0",
+		"rollup-plugin-svelte": "^6.0.0",
+		"rollup-plugin-terser": "^7.0.0",
+		"svelte": "^3.0.0"
+	}
+}
