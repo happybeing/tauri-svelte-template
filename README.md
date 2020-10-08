@@ -1,105 +1,53 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Tauri + Svelte App Template
 
----
+This is a quick-start template for creating a Tauri app using Sveltejs, based on
+the Svelte template at https://github.com/sveltejs/template.
 
-# svelte app
+## Pre-requisites
+Go to https://tauri.studio and set up Tauri for your operating system. Also
+install `yarn` if you want to follow the instructions here verbatim.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
+Check that Tauri is working by creating a throwaway test project:
 ```bash
-npx degit sveltejs/template svelte-app
+yarn tauri init
+```
+If that doesn't appear to be working, `yarn tauri info` might give some helpful information.
+
+## Create A Tauri + Svelte App 
+1. Create a new Tauri + Svelte project using
+```bash
+  npx degit theWebalyst/tauri-svelte-template svelte-app
+  cd svelte-app
+```
+
+2. Edit the `config.json` and `src-tauri/tauri.config.json` files to configure your
+app.
+
+## Development
+
+Install the dependencies and start your Svelte development server:
+```bash
 cd svelte-app
+yarn && yarn dev
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
+In another console, start the Tauri development environment:
 ```bash
 cd svelte-app
-npm install
+yarn tauri dev
 ```
 
-...then start [Rollup](https://rollupjs.org):
+You should see your Tauri app window display the Svelte "Hello World" app. This
+will take a while to happen the first time you do this, while dependencies are
+downloaded and built.
 
-```bash
-npm run dev
-```
+## Next
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+This template is just to get your development environment set up. For how to
+proceed from this point, refer to the Svelte and Tauri websites.
 
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
+## LICENSE
 
-If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
+Everything is GPL3.0 unless otherwise stated. Any contributions are accepted on the condition they conform to this license.
 
-## Building and running in production mode
-
-To create an optimised version of the app:
-
-```bash
-npm run build
-```
-
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
-
-## Single-page app mode
-
-By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
-
-If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
-
-```js
-"start": "sirv public --single"
-```
-
-## Using TypeScript
-
-This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
-
-```bash
-node scripts/setupTypeScript.js
-```
-
-Or remove the script via:
-
-```bash
-rm scripts/setupTypeScript.js
-```
-
-## Deploying to the web
-
-### With [Vercel](https://vercel.com)
-
-Install `vercel` if you haven't already:
-
-```bash
-npm install -g vercel
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-vercel deploy --name my-project
-```
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public my-project.surge.sh
-```
+See also ./LICENSE
