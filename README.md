@@ -16,7 +16,7 @@ If that doesn't appear to be working, `yarn tauri info` might give some helpful 
 ## Create A Tauri + Svelte App 
 1. Create a new Tauri + Svelte project using
 ```bash
-  npx degit theWebalyst/tauri-svelte-template svelte-app
+  npx degit happybeing/tauri-svelte-template svelte-app
   cd svelte-app
 ```
 
